@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include("header.ejs") %> 
+    <div class="main">
+        <div class="review">
+            <% if (b=="") { %>
+            <p class="red">Blog content was empty.</p>
+            <% } else { %>
+                <p class="green">Your blog is added.</p>
+            <% } %>
+        </div>
+
+        
+        <a href="/">
+            <div class="router">
+                <p>Return to main page</p>
+            </div>
+        </a>
+        
+
+    </div>
+    <%- include("footer.ejs") %> 
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include("header.ejs") %> 
+    <div class="main">
+    <div class="blog-detail">
+    <div class="title"><p><%= blogg.title %></p></div>
+    
+    <div class="author"><p>by <%= blogg.author %></p></div>
+
+    <div class="date-and-time"><%= blogg.date %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= blogg.time %></div>
+
+    <hr/>
+    
+    <div class="text"><pre id="blogTextHolder"><%= blogg.blogText %></pre></div>
+    </div>
+    
+    
+    </div>
+    <%- include("footer.ejs") %> 
+</body>
+
+</html>

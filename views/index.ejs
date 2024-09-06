@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bleg Web Application</title>
+</head>
+<body>
+    <%- include("header.ejs") %> 
+    <div class="main">
+        <% for(let i = 0; i < blogs.length; i++) { %>
+            <div class="brief-blog" id="Id<%= i %>">
+                <a href="/blogId<%= i %>">
+                    <div class="blog-title components"><p ><%= blogs[i].title %></p></div>
+                    <div class="date-time components"><p><%= blogs[i].date %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= blogs[i].time %></p></div>
+                    <% let brifedblog =  blogs[i].blogText.substr(0,250)+' ...'%>
+                    <div class="blog-content components"><p><%= brifedblog %></p></div>
+                    <div class="author-name components"><p>By <%= blogs[i].author %></p></div>
+                </a>
+            </div>
+        <% } %> 
+        
+        <div id="blogAdd">
+            <a href="/newBlog">
+                <div id="addButton">
+                    <p id="plusSign">+</p>
+                    <p id="add">Add Your Story</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <%- include("footer.ejs") %> 
+</body>
+
+</html>

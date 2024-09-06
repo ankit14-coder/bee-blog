@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include("header.ejs") %> 
+    <div class="main">
+        <div class="newBlog-content">
+            <form action="/submit" method="POST">
+                
+                <div class="newBlog-title"><span class="newBlog-title-1">Name of the blog:</span>
+                    <span class="newBlog-title-2"><input type="text" name="title" placeholder="Title of the blog"></span></div>
+
+                <div class="newBlog-author"><span class="newBlog-author-1">Name of the Author:</span>
+                    <span class="newBlog-author-2"><input type="text" name="author" placeholder="Your name"></span></div>
+
+                <div class="newBlog-blogText"><span class="newBlog-blogText-1">Write blog:</span>
+                    <span class="newBlog-blogText-2"><textarea name="blogText" id="blog" style="height: 35vh; width: 60vw;" placeholder="Your blog" ></textarea></span></div>
+
+                <div class="newBlog-submit"><input type="submit" value="Add"></div>
+                
+            </form>
+        </div>
+    </div>
+    <%- include("footer.ejs") %> 
+</body>
+</html>
